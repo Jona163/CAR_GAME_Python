@@ -163,3 +163,6 @@ while not gameover:
     # Actualizar la pantalla de simulación del amortiguador
     draw_simulation()
     screen.blit(simulation_screen, simulation_screen_rect)
+
+    # Actualizar la pantalla de simulación del amortiguador
+    pygame.display.update(simulation_screen_rect)
