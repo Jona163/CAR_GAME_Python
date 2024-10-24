@@ -33,3 +33,11 @@ simulation_screen_rect = pygame.Rect(width // 2, 0, width // 2, height)
 # Inicializar superficies para las pantallas
 game_screen = pygame.Surface(game_screen_rect.size)
 simulation_screen = pygame.Surface(simulation_screen_rect.size)
+
+# Cargar recursos de imagen
+car_image = pygame.image.load('images/car.png')
+pickup_truck_image = pygame.image.load('images/pickup_truck.png')
+semi_trailer_image = pygame.image.load('images/semi_trailer.png')
+taxi_image = pygame.image.load('images/taxi.png')
+van_image = pygame.image.load('images/van.png')
+crash_image = pygame.image.load('images/crash.png')
