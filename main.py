@@ -102,3 +102,17 @@ vehicle_rects = []
 
 # Parámetros del jugador y el vehículo
 player_mass = 1.0
+
+# Bucle del juego principal
+while not gameover:
+    clock.tick(fps)
+
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            gameover = True
+
+        if event.type == KEYDOWN:
+            if event.key == K_LEFT:
+                player_rect.move_ip(-100, 0)
+            elif event.key == K_RIGHT:
+                player_rect.move_ip(100, 0)
