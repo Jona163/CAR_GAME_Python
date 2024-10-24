@@ -143,3 +143,10 @@ while not gameover:
             vehicle_images = [pickup_truck_image, semi_trailer_image, taxi_image, van_image]
             vehicle_image = random.choice(vehicle_images)
             vehicle_rects.append((vehicle_image, vehicle_image.get_rect(center=(lane, -100))))
+
+    # Mover los vehículos y comprobar colisiones
+    crash_rect = None
+    for i, vehicle_rect in enumerate(vehicle_rects):
+        vehicle_rect[1].move_ip(0, speed)
+        if vehicle_rect[1].top > height:
+            vehicle_rects.pop(i)
