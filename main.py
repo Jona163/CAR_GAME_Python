@@ -50,3 +50,14 @@ damping_factor = 0.2
 # Inicializar variables del jugador
 player_rect = car_image.get_rect(center=(250, 400))
 player_velocity = 0
+
+# Función para dibujar el juego principal
+def draw_game():
+    # Dibujar la carretera
+    game_screen.fill(green)
+    pygame.draw.rect(game_screen, gray, (100, 0, 300, height))
+    pygame.draw.rect(game_screen, yellow, (95, 0, 10, height))
+    pygame.draw.rect(game_screen, yellow, (395, 0, 10, height))
+    for y in range(-100, height + 100, 100):
+        pygame.draw.rect(game_screen, white, (245, y, 10, 50))
+    game_screen.blit(car_image, player_rect)
