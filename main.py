@@ -150,3 +150,9 @@ while not gameover:
         vehicle_rect[1].move_ip(0, speed)
         if vehicle_rect[1].top > height:
             vehicle_rects.pop(i)
+            score += 1
+            if score % 5 == 0:
+                speed += 1
+                spring_stiffness += 0.05
+                damping_factor += 0.05
+        if vehicle_rect[1].colliderect(player_rect):
