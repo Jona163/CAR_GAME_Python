@@ -81,3 +81,16 @@ def draw_game():
         text_rect = text.get_rect()
         text_rect.center = (width // 4, 100)
         game_screen.blit(text, text_rect)
+
+# Función para dibujar la simulación```python
+def draw_simulation():
+    # Limpiar la pantalla de simulación
+    simulation_screen.fill(green)
+
+    # Calcular la posición y la fuerza del amortiguador
+    spring_force = -spring_stiffness * (player_rect.centery - height + spring_length)
+    damping_force = -damping_factor * player_velocity
+    total_force = spring_force + damping_force
+    acceleration = total_force
+    player_velocity += acceleration
+    player_rect.centery += player_velocity
