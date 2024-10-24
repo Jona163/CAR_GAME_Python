@@ -61,3 +61,14 @@ def draw_game():
     for y in range(-100, height + 100, 100):
         pygame.draw.rect(game_screen, white, (245, y, 10, 50))
     game_screen.blit(car_image, player_rect)
+
+    # Mostrar la puntuación
+    font = pygame.font.Font(pygame.font.get_default_font(), 16)
+    text = font.render('Score: ' + str(score), True, white)
+    text_rect = text.get_rect()
+    text_rect.center = (50, 400)
+    game_screen.blit(text, text_rect)
+
+    # Dibujar los vehículos
+    for vehicle_rect in vehicle_rects:
+        game_screen.blit(vehicle_rect[0], vehicle_rect[1])
