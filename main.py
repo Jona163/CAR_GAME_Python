@@ -156,3 +156,6 @@ while not gameover:
                 spring_stiffness += 0.05
                 damping_factor += 0.05
         if vehicle_rect[1].colliderect(player_rect):
+            gameover = True
+            crash_rect = vehicle_rect[1]
+            break
