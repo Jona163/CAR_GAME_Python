@@ -130,3 +130,16 @@ while not gameover:
     # Salir del bucle si gameover es True
     if gameover:
         break
+
+    # Añadir vehículos al juego
+    if len(vehicle_rects) < 2:
+        add_vehicle = True
+        for vehicle_rect in vehicle_rects:
+            if vehicle_rect[1].top < -100:
+                add_vehicle = False
+                break
+        if add_vehicle:
+            lane = random.choice([150, 250, 350])
+            vehicle_images = [pickup_truck_image, semi_trailer_image, taxi_image, van_image]
+            vehicle_image = random.choice(vehicle_images)
+            vehicle_rects.append((vehicle_image, vehicle_image.get_rect(center=(lane, -100))))
