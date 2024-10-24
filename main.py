@@ -26,3 +26,10 @@ fps = 120
 gameover = False
 speed = 2
 score = 0
+# Posiciones y tamaños de las pantallas
+game_screen_rect = pygame.Rect(0, 0, width // 2, height)
+simulation_screen_rect = pygame.Rect(width // 2, 0, width // 2, height)
+
+# Inicializar superficies para las pantallas
+game_screen = pygame.Surface(game_screen_rect.size)
+simulation_screen = pygame.Surface(simulation_screen_rect.size)
