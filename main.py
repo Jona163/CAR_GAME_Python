@@ -41,3 +41,8 @@ semi_trailer_image = pygame.image.load('images/semi_trailer.png')
 taxi_image = pygame.image.load('images/taxi.png')
 van_image = pygame.image.load('images/van.png')
 crash_image = pygame.image.load('images/crash.png')
+
+# Parámetros del amortiguador
+spring_length = 200
+spring_stiffness = 0.1
+damping_factor = 0.2
