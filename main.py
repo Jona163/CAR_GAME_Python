@@ -159,3 +159,7 @@ while not gameover:
             gameover = True
             crash_rect = vehicle_rect[1]
             break
+
+    # Actualizar la pantalla de simulación del amortiguador
+    draw_simulation()
+    screen.blit(simulation_screen, simulation_screen_rect)
