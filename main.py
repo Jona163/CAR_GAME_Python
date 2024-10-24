@@ -116,3 +116,17 @@ while not gameover:
                 player_rect.move_ip(-100, 0)
             elif event.key == K_RIGHT:
                 player_rect.move_ip(100, 0)
+
+    # Limpiar la pantalla principal
+    game_screen.fill(green)
+
+    # Actualizar y dibujar el juego principal
+    draw_game()
+    screen.blit(game_screen, game_screen_rect)
+
+    # Actualizar la pantalla principal
+    pygame.display.update(game_screen_rect)
+
+    # Salir del bucle si gameover es True
+    if gameover:
+        break
