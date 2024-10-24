@@ -72,3 +72,12 @@ def draw_game():
     # Dibujar los vehículos
     for vehicle_rect in vehicle_rects:
         game_screen.blit(vehicle_rect[0], vehicle_rect[1])
+
+    # Dibujar el choque si gameover es True
+    if gameover:
+        game_screen.blit(crash_image, crash_rect)
+        pygame.draw.rect(game_screen, red, (0, 50, width // 2, 100))
+        text = font.render('Modelado Terminado. ¿Deseas modelar de nuevo? (Presiona Y o N)', True, white)
+        text_rect = text.get_rect()
+        text_rect.center = (width // 4, 100)
+        game_screen.blit(text, text_rect)
