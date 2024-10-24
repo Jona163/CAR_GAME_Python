@@ -46,3 +46,7 @@ crash_image = pygame.image.load('images/crash.png')
 spring_length = 200
 spring_stiffness = 0.1
 damping_factor = 0.2
+
+# Inicializar variables del jugador
+player_rect = car_image.get_rect(center=(250, 400))
+player_velocity = 0
