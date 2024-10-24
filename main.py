@@ -166,3 +166,6 @@ while not gameover:
 
     # Actualizar la pantalla de simulación del amortiguador
     pygame.display.update(simulation_screen_rect)
+
+# Salir del juego
+pygame.quit()
