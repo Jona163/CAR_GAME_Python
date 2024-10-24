@@ -94,3 +94,11 @@ def draw_simulation():
     acceleration = total_force
     player_velocity += acceleration
     player_rect.centery += player_velocity
+
+
+# Inicializar variables del juego principal
+player_rect = car_image.get_rect(center=(250, 400))
+vehicle_rects = []
+
+# Parámetros del jugador y el vehículo
+player_mass = 1.0
