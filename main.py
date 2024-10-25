@@ -1,7 +1,7 @@
 # Jona163
 # Autor: Jonathan Hernández
-# Fecha: 25 octubre 2024
-# Descripción: Calculadora Vectorial en Python Version 2.
+# Fecha: 25 octubre de 2024 
+# Proyecto: Car Py Game 
 # GitHub: https://github.com/Jona163
 import pygame
 from pygame.locals import *
